@@ -1,0 +1,53 @@
+\hypertarget{mlb_8c}{}\section{Файл mlb.\+c}
+\label{mlb_8c}\index{mlb.\+c@{mlb.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}text/text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text/\+\_\+text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mlb_8c_a455a069aea37ea2b4133350be0ee43cc}{mlb}} (text txt)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{mlb_8c}{mlb.\+c}} -- реализует команду перемещения курсора в начало строки \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{mlb_8c_a455a069aea37ea2b4133350be0ee43cc}\label{mlb_8c_a455a069aea37ea2b4133350be0ee43cc}} 
+\index{mlb.\+c@{mlb.\+c}!mlb@{mlb}}
+\index{mlb@{mlb}!mlb.\+c@{mlb.\+c}}
+\subsubsection{\texorpdfstring{mlb()}{mlb()}}
+{\footnotesize\ttfamily void mlb (\begin{DoxyParamCaption}\item[{text}]{txt }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{mlb_8c}{mlb.\+c}} -- реализует команду перемещения курсора в начало строки 
+
+Перемещает курсор в начало строки
+
+Copyright (c) 2020, Tikkoeva Anastasia \href{mailto:tikkoeva@petrsu.ru}{\tt tikkoeva@petrsu.\+ru}
+
+This code is licensed under a M\+I\+T-\/style license. Перемещает курсор в начало строки 
+\begin{DoxyCode}
+23 \{
+24     
+25     \textcolor{comment}{/* Проверяем, имеется ли текст */}
+26     \textcolor{keywordflow}{if} (txt == NULL || txt->length == 0) \{
+27     fprintf(stderr, \textcolor{stringliteral}{"There are already no any lines in the text!\(\backslash\)n"});
+28     \textcolor{keywordflow}{return};
+29     \}
+30 
+31     \textcolor{comment}{/* Текст ненулевой длины должен содержать хотя бы одну строку */}
+32     assert(txt->begin != NULL && txt->end != NULL);
+33 
+34         \textcolor{comment}{/* Если курсор находится в начале текста, то двинуть его мы не можем*/}
+35     \textcolor{keywordflow}{if} (txt->cursor->position == -1) \{
+36     printf(\textcolor{stringliteral}{"Another command needed to jump between lines\(\backslash\)n"});
+37     \} \textcolor{keywordflow}{else} 
+38 
+39     txt->cursor->position = 0; \textcolor{comment}{//сдвигаем курсор в начало строки}
+40     
+41 
+42 \}
+\end{DoxyCode}

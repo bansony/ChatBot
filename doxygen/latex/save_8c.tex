@@ -1,0 +1,39 @@
+\hypertarget{save_8c}{}\section{Файл save.\+c}
+\label{save_8c}\index{save.\+c@{save.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text/text.\+h\char`\"{}}\newline
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{save_8c_a0dc9879063dd3bd3fdfd62ab8a01913d}{save}} (text txt, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Сохраняет содержимое указанного файла \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{save_8c_a0dc9879063dd3bd3fdfd62ab8a01913d}\label{save_8c_a0dc9879063dd3bd3fdfd62ab8a01913d}} 
+\index{save.\+c@{save.\+c}!save@{save}}
+\index{save@{save}!save.\+c@{save.\+c}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void save (\begin{DoxyParamCaption}\item[{text}]{txt,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Сохраняет содержимое указанного файла 
+
+
+\begin{DoxyCode}
+26 \{
+27     FILE *f = fopen(\textcolor{stringliteral}{"f.txt"}, \textcolor{stringliteral}{"a+"});
+28 
+29     \textcolor{comment}{/* Открываем файл для чтения, контролируя ошибки */}
+30     \textcolor{keywordflow}{if} ((f = fopen(filename, \textcolor{stringliteral}{"w"})) == NULL) \{
+31         printf(\textcolor{stringliteral}{"The file %s cannot be opened\(\backslash\)n"}, filename);
+32     \textcolor{comment}{/* Применяем функцию save\_line к каждой строке текста */}
+33     \textcolor{keywordflow}{return};
+34     \}
+35     process\_forward(txt, save\_line, (\textcolor{keywordtype}{void}*)f);
+36     fclose(f);
+37     \}
+\end{DoxyCode}

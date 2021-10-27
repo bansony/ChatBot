@@ -1,0 +1,33 @@
+\hypertarget{showupper_8c}{}\section{Файл showupper.\+c}
+\label{showupper_8c}\index{showupper.\+c@{showupper.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text/text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text/\+\_\+text.\+h\char`\"{}}\newline
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{showupper_8c_a7a43b5e5a9f55665d5a84b2dc7df3d5a}{to\+\_\+upper}} (text txt)
+\begin{DoxyCompactList}\small\item\em Выводит содержимое указанного файла на экран \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{showupper_8c_a7a43b5e5a9f55665d5a84b2dc7df3d5a}\label{showupper_8c_a7a43b5e5a9f55665d5a84b2dc7df3d5a}} 
+\index{showupper.\+c@{showupper.\+c}!to\+\_\+upper@{to\+\_\+upper}}
+\index{to\+\_\+upper@{to\+\_\+upper}!showupper.\+c@{showupper.\+c}}
+\subsubsection{\texorpdfstring{to\+\_\+upper()}{to\_upper()}}
+{\footnotesize\ttfamily void to\+\_\+upper (\begin{DoxyParamCaption}\item[{text}]{txt }\end{DoxyParamCaption})}
+
+
+
+Выводит содержимое указанного файла на экран 
+
+Выводит содержимое указанного файла в верхнем регистре 
+\begin{DoxyCode}
+23 \{
+24     \textcolor{comment}{/* Применяем функцию show\_upper к каждой строке текста */}
+25     process\_forward(txt, show\_upper, NULL);
+26 \}
+\end{DoxyCode}
