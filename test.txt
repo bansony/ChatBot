@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 New text bankovsk
+=======
+Проверочный файл d bankovsk2
+>>>>>>> bankovsk2
