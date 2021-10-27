@@ -1,0 +1,72 @@
+\hypertarget{m_8c}{}\section{Файл m.\+c}
+\label{m_8c}\index{m.\+c@{m.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text/text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text/\+\_\+text.\+h\char`\"{}}\newline
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{m_8c_a206b521984c57ff9fae1b15166e55a41}{m}} (text txt, int num\+\_\+str, int num\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Выводим содержимое указанного файла на экран \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{m_8c_a206b521984c57ff9fae1b15166e55a41}\label{m_8c_a206b521984c57ff9fae1b15166e55a41}} 
+\index{m.\+c@{m.\+c}!m@{m}}
+\index{m@{m}!m.\+c@{m.\+c}}
+\subsubsection{\texorpdfstring{m()}{m()}}
+{\footnotesize\ttfamily void m (\begin{DoxyParamCaption}\item[{text}]{txt,  }\item[{int}]{num\+\_\+str,  }\item[{int}]{num\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Выводим содержимое указанного файла на экран 
+
+Перемещает курсор в заданную позицию 
+\begin{DoxyCode}
+11 \{
+12 \textcolor{comment}{/* Проверяем, имеется ли текст */}
+13     \textcolor{keywordflow}{if} (txt == NULL || txt->length == 0) \{
+14         fprintf(stderr, \textcolor{stringliteral}{"There are already no any lines in the text!\(\backslash\)n"});
+15         \textcolor{keywordflow}{return};
+16     \} 
+17     
+18     \textcolor{comment}{/* Текст ненулевой длины должен содержать хотя бы одну строку */}
+19     assert(txt->begin != NULL && txt->end != NULL);
+20     
+21     \textcolor{comment}{/* Стартуем с начальной строки текста */}
+22     node *current = txt->begin;
+23     
+24     \textcolor{comment}{/* Проверяем корректность введёного номера строки */}
+25     \textcolor{keywordflow}{if} (num\_str > (\textcolor{keywordtype}{int})txt->length || num\_str <= 0)
+26     \{
+27         printf(\textcolor{stringliteral}{"This num\_str does not exist. The value is out of the range. \(\backslash\)n"});
+28         \textcolor{keywordflow}{return};
+29     \}
+30     
+31     \textcolor{comment}{/* Запоминаем номер строки */}
+32     \textcolor{keywordtype}{int} ln = 1;
+33     
+34     \textcolor{comment}{/* "Бежим", пока не дойдём до нужной строки */}
+35     \textcolor{keywordflow}{while} (ln != num\_str)
+36     \{
+37         ln++;
+38         current = current->next;   
+39     \}
+40 
+41     \textcolor{comment}{/* Проверяем корректность введённой позиции курсора */}
+42     \textcolor{keywordflow}{if} (num\_pos > (\textcolor{keywordtype}{int})strlen(current->contents) || num\_pos < 0)
+43     \{
+44         printf(\textcolor{stringliteral}{"This position does not exist. The value is out of the range. \(\backslash\)n"});
+45         \textcolor{keywordflow}{return}; 
+46     \}
+47     \textcolor{keywordflow}{else}
+48     \{
+49         \textcolor{comment}{/* Переприсваиваем строку, в которой находится курсор */}
+50         txt->cursor->line = current;
+51         
+52         \textcolor{comment}{/* Переприсваиваем позицию, в которой находится курсор */}
+53         txt->cursor->position = num\_pos;
+54     \}
+55 \}
+\end{DoxyCode}
