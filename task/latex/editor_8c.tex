@@ -1,0 +1,86 @@
+\hypertarget{editor_8c}{}\section{Файл editor.\+c}
+\label{editor_8c}\index{editor.\+c@{editor.\+c}}
+
+
+Cтроковый текстовый редактор  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}text/text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{editor_8c_a3e937c42922f7601edb17b747602c471}\label{editor_8c_a3e937c42922f7601edb17b747602c471}} 
+\#define {\bfseries M\+A\+X\+L\+I\+NE}~255
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{editor_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Cтроковый текстовый редактор 
+
+\begin{DoxyAuthor}{Автор}
+Sonya Bankovskaya \href{mailto:bankovskaasona37@gmail.com}{\tt bankovskaasona37@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Авторство}
+M\+I\+T-\/style license 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Дата}
+6.\+10.\+2021 
+\end{DoxyDate}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{editor_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{editor_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{editor.\+c@{editor.\+c}!main@{main}}
+\index{main@{main}!editor.\+c@{editor.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Обрабатывает введенную пользователем команду и вызывает соответсвующую функцию\+: 1) Функция загрузка файла\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{common_8h_a5bbc578b96e1803ea1c5083c743cb66e}{load}}(txt, arg);
+\end{DoxyCode}
+
+
+2) Функция вывода текста на экран\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{common_8h_a8c7ccfcd6288c249f9ccaee77c3928a9}{show}}(txt);
+\end{DoxyCode}
+
+
+3) Функция вывода текста на экран с нумерацией\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{common_8h_afbcb98ae2eca828740dc897d14e5c32c}{shownum}}(txt);
+\end{DoxyCode}
+
+
+4) Функция загрузки содержимого файла\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{common_8h_a0dc9879063dd3bd3fdfd62ab8a01913d}{save}}(txt, arg);
+\end{DoxyCode}
+
+
+5) Функция перемещения курсора на один символ вправо\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{common_8h_ac197bd344557f13a73a5040b8283852b}{mcf}}(txt);
+\end{DoxyCode}
+
+
+6) Функция удаления первой строки\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{common_8h_adf2635ab2317bb2e06b05df73b9f9691}{rh}}(txt);
+\end{DoxyCode}
+
+
+7) Функция перемещения курсора\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{common_8h_a206b521984c57ff9fae1b15166e55a41}{m}}(txt, num\_str, num\_pos);
+\end{DoxyCode}
