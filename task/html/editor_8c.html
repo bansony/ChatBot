@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Текстовый редактор: Файл editor.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Текстовый редактор
+   </div>
+   <div id="projectbrief">Некоторые функции текстового редактора</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл editor.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Cтроковый текстовый редактор  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;text/text.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="common_8h_source.html">common.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a3e937c42922f7601edb17b747602c471"><td class="memItemLeft" align="right" valign="top"><a id="a3e937c42922f7601edb17b747602c471"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAXLINE</b>&#160;&#160;&#160;255</td></tr>
+<tr class="separator:a3e937c42922f7601edb17b747602c471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Cтроковый текстовый редактор </p>
+<dl class="section author"><dt>Автор</dt><dd>Sonya Bankovskaya <a href="#" onclick="location.href='mai'+'lto:'+'ban'+'ko'+'vsk'+'aa'+'son'+'a3'+'7@g'+'ma'+'il.'+'co'+'m'; return false;">banko<span style="display: none;">.nosp@m.</span>vska<span style="display: none;">.nosp@m.</span>asona<span style="display: none;">.nosp@m.</span>37@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a> </dd></dl>
+<dl class="section copyright"><dt>Авторство</dt><dd>MIT-style license </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>6.10.2021 </dd></dl>
+</div><h2 class="groupheader">Функции</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Обрабатывает введенную пользователем команду и вызывает соответсвующую функцию: </p>
+<p>1) Функция загрузка файла: </p><div class="fragment"><div class="line"><a class="code" href="common_8h.html#a5bbc578b96e1803ea1c5083c743cb66e">load</a>(txt, arg);</div></div><!-- fragment --><p>2) Функция вывода текста на экран: </p><div class="fragment"><div class="line"><a class="code" href="common_8h.html#a8c7ccfcd6288c249f9ccaee77c3928a9">show</a>(txt);</div></div><!-- fragment --><p>3) Функция вывода текста на экран с нумерацией: </p><div class="fragment"><div class="line"><a class="code" href="common_8h.html#afbcb98ae2eca828740dc897d14e5c32c">shownum</a>(txt);</div></div><!-- fragment --><p>4) Функция загрузки содержимого файла: </p><div class="fragment"><div class="line"><a class="code" href="common_8h.html#a0dc9879063dd3bd3fdfd62ab8a01913d">save</a>(txt, arg);</div></div><!-- fragment --><p>5) Функция перемещения курсора на один символ вправо: </p><div class="fragment"><div class="line"><a class="code" href="common_8h.html#ac197bd344557f13a73a5040b8283852b">mcf</a>(txt);</div></div><!-- fragment --><p>6) Функция удаления первой строки: </p><div class="fragment"><div class="line"><a class="code" href="common_8h.html#adf2635ab2317bb2e06b05df73b9f9691">rh</a>(txt);</div></div><!-- fragment --><p>7) Функция перемещения курсора: </p><div class="fragment"><div class="line"><a class="code" href="common_8h.html#a206b521984c57ff9fae1b15166e55a41">m</a>(txt, num_str, num_pos);</div></div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>
