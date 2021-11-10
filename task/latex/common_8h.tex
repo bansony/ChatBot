@@ -1,0 +1,143 @@
+\hypertarget{common_8h}{}\section{Файл common.\+h}
+\label{common_8h}\index{common.\+h@{common.\+h}}
+
+
+Прототипы функций реализации команд редактора  
+
+
+{\ttfamily \#include \char`\"{}text/text.\+h\char`\"{}}\newline
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{common_8h_a86d500a34c624c2cae56bc25a31b12f3}\label{common_8h_a86d500a34c624c2cae56bc25a31b12f3}} 
+\#define {\bfseries U\+N\+U\+S\+ED}(x)~(void)(x)
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{common_8h_a8c7ccfcd6288c249f9ccaee77c3928a9}{show}} (text txt)
+\item 
+void \mbox{\hyperlink{common_8h_a206b521984c57ff9fae1b15166e55a41}{m}} (text txt, int num\+\_\+str, int num\+\_\+pos)
+\item 
+void \mbox{\hyperlink{common_8h_afbcb98ae2eca828740dc897d14e5c32c}{shownum}} (text txt)
+\item 
+void \mbox{\hyperlink{common_8h_ac197bd344557f13a73a5040b8283852b}{mcf}} (text txt)
+\item 
+void \mbox{\hyperlink{common_8h_adf2635ab2317bb2e06b05df73b9f9691}{rh}} (text txt)
+\begin{DoxyCompactList}\small\item\em Вызывает функцию rh\+\_\+line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{common_8h_a0dc9879063dd3bd3fdfd62ab8a01913d}{save}} (text txt, char $\ast$filename)
+\item 
+void \mbox{\hyperlink{common_8h_a5bbc578b96e1803ea1c5083c743cb66e}{load}} (text txt, char $\ast$filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Прототипы функций реализации команд редактора 
+
+\begin{DoxyAuthor}{Автор}
+Sonya Bankovskaya \href{mailto:bankovskaasona37@gmail.com}{\tt bankovskaasona37@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Авторство}
+M\+I\+T-\/style license 
+\end{DoxyCopyright}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{common_8h_a5bbc578b96e1803ea1c5083c743cb66e}\label{common_8h_a5bbc578b96e1803ea1c5083c743cb66e}} 
+\index{common.\+h@{common.\+h}!load@{load}}
+\index{load@{load}!common.\+h@{common.\+h}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void load (\begin{DoxyParamCaption}\item[{text}]{txt,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Загружает содержимое указанного файла \mbox{\Hypertarget{common_8h_a206b521984c57ff9fae1b15166e55a41}\label{common_8h_a206b521984c57ff9fae1b15166e55a41}} 
+\index{common.\+h@{common.\+h}!m@{m}}
+\index{m@{m}!common.\+h@{common.\+h}}
+\subsubsection{\texorpdfstring{m()}{m()}}
+{\footnotesize\ttfamily void m (\begin{DoxyParamCaption}\item[{text}]{txt,  }\item[{int}]{num\+\_\+str,  }\item[{int}]{num\+\_\+pos }\end{DoxyParamCaption})}
+
+Перемещает курсор на заданую позицию \mbox{\Hypertarget{common_8h_ac197bd344557f13a73a5040b8283852b}\label{common_8h_ac197bd344557f13a73a5040b8283852b}} 
+\index{common.\+h@{common.\+h}!mcf@{mcf}}
+\index{mcf@{mcf}!common.\+h@{common.\+h}}
+\subsubsection{\texorpdfstring{mcf()}{mcf()}}
+{\footnotesize\ttfamily void mcf (\begin{DoxyParamCaption}\item[{text}]{txt }\end{DoxyParamCaption})}
+
+Перемещает курсор на одну позицию вправо
+
+Вызывает функцию mcf\+\_\+line(перемещения курсора) 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em text} & txt Текстовый файл \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{common_8h_adf2635ab2317bb2e06b05df73b9f9691}\label{common_8h_adf2635ab2317bb2e06b05df73b9f9691}} 
+\index{common.\+h@{common.\+h}!rh@{rh}}
+\index{rh@{rh}!common.\+h@{common.\+h}}
+\subsubsection{\texorpdfstring{rh()}{rh()}}
+{\footnotesize\ttfamily void rh (\begin{DoxyParamCaption}\item[{text}]{txt }\end{DoxyParamCaption})}
+
+
+
+Вызывает функцию rh\+\_\+line. 
+
+Удаляет первую строку текста
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em text} & txt Текстовый файл \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{common_8h_a0dc9879063dd3bd3fdfd62ab8a01913d}\label{common_8h_a0dc9879063dd3bd3fdfd62ab8a01913d}} 
+\index{common.\+h@{common.\+h}!save@{save}}
+\index{save@{save}!common.\+h@{common.\+h}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void save (\begin{DoxyParamCaption}\item[{text}]{txt,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Сохраняет содержимое указанного файла в файл
+
+Загружает содержимое указанного файла 
+\begin{DoxyParams}{Аргументы}
+{\em text} & txt \\
+\hline
+{\em char} & $\ast$filename \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{common_8h_a8c7ccfcd6288c249f9ccaee77c3928a9}\label{common_8h_a8c7ccfcd6288c249f9ccaee77c3928a9}} 
+\index{common.\+h@{common.\+h}!show@{show}}
+\index{show@{show}!common.\+h@{common.\+h}}
+\subsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void show (\begin{DoxyParamCaption}\item[{text}]{txt }\end{DoxyParamCaption})}
+
+Выводит содержимое указанного файла на экран
+
+Вызывает функцию show\+\_\+line, которая ыыводит содержимое указанного файла на экран 
+\begin{DoxyParams}{Аргументы}
+{\em text} & txt Текстовый файл \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{common_8h_afbcb98ae2eca828740dc897d14e5c32c}\label{common_8h_afbcb98ae2eca828740dc897d14e5c32c}} 
+\index{common.\+h@{common.\+h}!shownum@{shownum}}
+\index{shownum@{shownum}!common.\+h@{common.\+h}}
+\subsubsection{\texorpdfstring{shownum()}{shownum()}}
+{\footnotesize\ttfamily void shownum (\begin{DoxyParamCaption}\item[{text}]{txt }\end{DoxyParamCaption})}
+
+Выводит содержимое указанного файла с нумерацией строк
+
+Вызывает функцию shownuum\+\_\+line, которая выводит содержимое указанного файла с нумерацией строк на экран 
+\begin{DoxyParams}{Аргументы}
+{\em text} & txt Текстовый файл \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
