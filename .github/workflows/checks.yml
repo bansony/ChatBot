@@ -18,10 +18,6 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: istall deps
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
     - name: Install flake8
       run: pip install flake8
     - name: Run flake8
