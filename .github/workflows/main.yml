@@ -1,0 +1,25 @@
+name: Code checks
+
+on:
+  push:
+    branches: [ master, tikkoeva, test]
+  pull_request: 
+    branches: [ master, tikkoeva, test]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -uses: actions/checkout@v2
+      -name: Set up Python
+       uses: actions/setup-python@v2
+       with:
+        python-version: 3.9
+      -name: istall deps
+      run: |
+      python -m pip install --upgrade pip
+      pip install -r requiremnts.txt
+    -name: Run flake8
+    run: flake8 .
+    -name: Run mypy
+    run: mypy .
