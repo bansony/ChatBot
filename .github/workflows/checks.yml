@@ -11,9 +11,8 @@ jobs:
     strategy:
       matrix:
         python-version:
-        - 'pypy-3.6' # the latest available version of PyPy that supports Python 3.6
-        - 'pypy-3.7' # the latest available version of PyPy that supports Python 3.7
-        - 'pypy-3.7-v7.3.3' # Python 3.7 and PyPy 7.3.3
+        - '3.8' # the latest available version of PyPy that supports Python 3.6
+        - '3.9' # the latest available version of PyPy that supports Python 3.7
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
