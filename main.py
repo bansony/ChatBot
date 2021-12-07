@@ -1,5 +1,6 @@
 import razdel
 import nltk
+c="ababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababbaababba"
 a=3
 b=4
 a, b = b, a
